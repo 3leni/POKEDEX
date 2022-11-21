@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokedex</title>
+        <link  rel="STYLESHEET" type="text/css" href="Estilo_poke.css">
+        
+    </head>
+    <body>
+        <!--Start Principal Container -->
+        <section class="Pokedex-JS"> 
+            <!--Music and Logo Container start -->
+            <div class="presentation">
+                <img class="img-pokemon" src="./image/logo.png" width="350px" height="auto">
+                <audio controls  autoplay  loop>
+                    <source src="./src/PokeIntro.mp3"  type="audio/mp3">
+                </audio>
+            </div>
+            <!--Music and Logo Container end -->
+            <!--start POKEDEX -->
+            <section class="contenedor-poke"> 
+                <!--start POKEDEX Left -->
+                <div class="left-poke">
+                    <!--Left top -->
+                    <div class="left-top">
+                        <svg heigth="100" width="355" class="left-svg-top">
+                            <polyline points="0,72 105,72 120,45 350,45  " style="fill:none; stroke:black; stroke-width:3 "></polyline>
+                        </svg>
+                        <div class="lights-cont">
+                            <div class="big-light-b">
+                                <div class="big-light-blue"></div>
+                            </div>
+                            <div class="small-light-cont">
+                                <div class="small-light-red"></div>
+                                <div class="small-light-yellow"></div>
+                                <div class="small-light-green"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Left center-->
+                    <div class="screen-cont">
+                        <div class="screen">
+                            <div class="top-screen-lights">
+                                <div class="mini-lights"></div>
+                                <div class="mini-lights"></div>
+                            </div>
+                            <div id="main-screen">
+                                <img src="./image/Pokemon-Pokeball.png" alt="Pokemon" id="pokeImg" width="100px">
+                            </div >
+                            <div class="bottom-screen">
+                                <div class="bottom-lights">
+                                    <div class="small-light-red"></div>
+                                </div>
+                                <div class="line-cont">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>                                
+                                </div>
+                            </div>
+                            <div class="name-cont">
+                                <!--Nombre de output-->
+                                <div><span id="name-pokemon"> ------</span></div>
+                                <div><span id="id-pokemon">##</span></div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <!--left Panel Bottom-->
+                    <div class="panel-cont">
+                        <div class="buttons-cont">
+                            <div class="big-button"></div>
+                            <div class="line-button-cont">
+                                <div class="long-line"></div>
+                                <div class="long-line"></div>
+                            </div>
+                        </div>
+                        <div class="nav-cont">
+                            <div class="nav-poke">
+                                <input type="text" placeholder="ID/NAME" id="pokeName" name="pokeName" p >
+                            </div>
+                            <div class="button-poke">
+                                <button onclick="fetchPokemon()"><img  id="icon" src="./image/search.ico"></audio></button>
+                            </div>
+                            <div class="nav-poke-cont">
+                                <div class="nav-button">
+                                    <div class="line-vertical"></div>
+                                    <div class="line-horizontal"></div>
+                                </div>
+                                <div class="nav-points">
+                                    <div class="small-light-red" ></div>
+                                    <div class="space-point"><b>. . .</b></div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!--end POKEDEX Left -->
+            <!--start POKEDEX Roll -->
+            <div class="roll">
+                    <div class="roll-center"></div>
+                    <div class="roll-center"></div>
+                    <div class="roll-center"></div>
+            </div>
+            <!--end POKEDEX Roll -->
+            <!--start POKEDEX Right -->
+            <div class="right-cont">
+                <div class="empty-cont"></div>
+                <div class="svg-cont">
+                        <svg height="" width="350px">
+                            <polyline
+                            points="0,100 0,11 230,11 240,38 349,38 349,73 0,73" 
+                            style="fill:rgb(226, 62, 62);stroke:black;stroke-width:3"
+                            />
+                        </svg>
+                </div>
+                <div class="right-design">
+                        <div class="right-center">
+                            <div class="screen-inf">
+                                <!--start abilities -->
+                                <div class="abilities-cont">
+                                    <h3>ABILITIES</h3>
+                                    <span id="abilities">........</span>
+                                </div>
+                                <!--end abilities -->
+                                <!--start stats -->
+                                <div class="stats-cont">
+                                    <h3>STATS</h3>
+                                    <span id="stats">........</span>
+                                </div>
+                                <!--end stats -->
+                            </div>
+                        </div>
+                        <div class="right-bottom">
+                            <div class="right-inf">
+                                <div class="right-data-cont">
+                                    <span id="weight">##</span>
+                                </div>
+                                <div class="right-data-cont">
+                                    <span id="bExperience">##</span>
+                                </div>
+                                <div class="right-data-cont">
+                                    <span id="height" >##</span>
+                                </div>
+                                <div class="right-data-cont">
+                                    <span id="type">## </span>
+                                </div>
+                            </div>
+                            <div class="right-button">
+                                <div class="cont-button-white">
+                                    <div class="button-white"></div>
+                                    <div  class="button-white"></div>
+                                </div>
+                                <div class="cont-button-point">
+                                    <div class="cont-line-black">
+                                        <div class="line-gray"></div>
+                                        <div class="line-gray"></div>
+                                    </div>
+                                    <div class="line-button-orange"></div>
+                                </div>
+                            </div>
+                            <div class="right-points">
+                                <div class="line-large-gray"></div>
+                                <div class="line-large-gray"></div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <!--end POKEDEX Right -->
+            </section>
+            <!--start POKEDEX -->
+        </section>
+        <!--End Principal Container -->
+    </body>
+    <footer>
+        <script src="./pokedex.js" ></script>
+    </footer>
+</html>
